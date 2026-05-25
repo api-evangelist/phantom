@@ -1,0 +1,422 @@
+aid: phantom
+url: https://raw.githubusercontent.com/api-evangelist/phantom/refs/heads/main/apis.yml
+name: Phantom
+tags:
+- Base
+- Bitcoin
+- Blockchain
+- Crypto
+- Cryptocurrency
+- Deeplinks
+- Embedded Wallet
+- Ethereum
+- EVM
+- Monad
+- MCP
+- Mobile
+- Polygon
+- Self-Custody
+- Solana
+- Sui
+- Wallet
+- Web3
+type: Index
+kind: company
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+created: '2026-05-24'
+modified: '2026-05-24'
+position: Consumer
+description: Phantom is a self-custodial multi-chain crypto wallet for Solana, Ethereum, Polygon, Base, Bitcoin,
+  Sui, Monad, and HyperEVM, distributed as a mobile app (iOS/Android) and browser extension with more than 20
+  million users. For developers, Phantom exposes injected Provider APIs per chain on window.phantom (Solana, EVM,
+  Bitcoin, Sui) following the Wallet Standard and EIP-1193, a Universal Link / phantom:// Deeplinks API for
+  mobile dApp integration with encrypted session handshakes, a multi-platform Connect SDK suite (React, React
+  Native, Browser SDKs) with embedded wallet support and OAuth social login (Google, Apple), and a Phantom MCP
+  Server that exposes 27 tools across wallet operations, swaps, portfolio rebalancing, and Hyperliquid
+  perpetuals for AI agents — each agent receives its own wallet via device-code authentication. Apps register
+  through the Phantom Portal to obtain an App ID, configure redirect URLs, verify domains, and opt into
+  auto-confirm contracts.
+apis:
+- aid: phantom:phantom-solana-provider-api
+  name: Phantom Solana Provider API
+  tags:
+  - Provider
+  - Solana
+  - Wallet
+  - Wallet Standard
+  - Web3
+  humanURL: https://docs.phantom.com/solana/integrating-phantom
+  properties:
+  - url: https://docs.phantom.com/solana/integrating-phantom
+    type: Documentation
+  - url: https://docs.phantom.com/developer-powertools/wallet-standard
+    type: Documentation
+  - url: https://docs.phantom.com/developer-powertools/sign-in-with-standards
+    type: Documentation
+  - url: https://docs.phantom.com/developer-powertools/solana-versioned-transactions
+    type: Documentation
+  - url: https://docs.phantom.com/developer-powertools/solana-token-extensions-token22
+    type: Documentation
+  - url: https://docs.phantom.com/developer-powertools/solana-priority-fees
+    type: Documentation
+  - url: https://docs.phantom.com/developer-powertools/solana-actions-and-blinks
+    type: Documentation
+  description: Solana wallet provider injected at window.phantom.solana exposing connect, disconnect, signMessage,
+    signIn (Sign-In With Solana), signTransaction, signAllTransactions, and signAndSendTransaction. Implements
+    the Solana Wallet Standard so dApps can also integrate through @solana/wallet-adapter. Supports versioned
+    transactions, priority fees, Token-2022 extensions, and Solana Actions & Blinks. Emits connect, disconnect,
+    and accountChanged events; exposes isPhantom, publicKey, and isConnected properties.
+- aid: phantom:phantom-evm-provider-api
+  name: Phantom EVM Provider API
+  tags:
+  - Base
+  - EIP-1193
+  - Ethereum
+  - EVM
+  - HyperEVM
+  - Monad
+  - Polygon
+  - Provider
+  - Wallet
+  humanURL: https://docs.phantom.com/ethereum-monad-testnet-base-and-polygon/provider-api-reference
+  properties:
+  - url: https://docs.phantom.com/ethereum-monad-testnet-base-and-polygon/provider-api-reference
+    type: Documentation
+  description: EIP-1193 compliant Ethereum Provider API injected at window.ethereum and window.phantom.ethereum
+    for Ethereum, Polygon, Base, Monad testnet, and HyperEVM. Supports the full Ethereum RPC surface for
+    connecting accounts, reading chain state, signing messages and typed data, sending transactions, switching
+    and adding chains, and watching assets. Emits standard accountsChanged, chainChanged, connect, and
+    disconnect events.
+- aid: phantom:phantom-bitcoin-provider-api
+  name: Phantom Bitcoin Provider API
+  tags:
+  - Bitcoin
+  - Ordinals
+  - PSBT
+  - Provider
+  - SegWit
+  - Taproot
+  - Wallet
+  humanURL: https://docs.phantom.com/bitcoin/provider-api-reference
+  properties:
+  - url: https://docs.phantom.com/bitcoin/provider-api-reference
+    type: Documentation
+  description: Bitcoin provider injected at window.phantom.bitcoin exposing requestAccounts (returning BtcAccount
+    objects with address, publicKey, addressType, and purpose), signMessage, and signPSBT for partially signed
+    Bitcoin transactions. Supports Taproot (p2tr), SegWit (p2wpkh), p2sh, and p2pkh address types and
+    distinguishes payment vs. ordinals purposes. Emits accountsChanged events. The window.phantom.bitcoin
+    provider is scheduled for deprecation in an upcoming release.
+- aid: phantom:phantom-sui-provider-api
+  name: Phantom Sui Provider API
+  tags:
+  - Move
+  - Provider
+  - Sui
+  - Wallet
+  humanURL: https://docs.phantom.com/sui/getting-started-with-sui
+  properties:
+  - url: https://docs.phantom.com/sui/getting-started-with-sui
+    type: Documentation
+  description: Sui provider exposed via window.phantom for browser and mobile platforms, offering connect,
+    signTransactionBlock, and signMessage methods so Sui dApps can integrate Phantom alongside their existing
+    EVM/Solana flows.
+- aid: phantom:phantom-deeplinks-api
+  name: Phantom Deeplinks API
+  tags:
+  - Android
+  - Deeplinks
+  - Encryption
+  - iOS
+  - Mobile
+  - Sessions
+  - Solana
+  - Universal Links
+  humanURL: https://docs.phantom.com/phantom-deeplinks/deeplinks-ios-and-android
+  baseURL: https://phantom.app/ul/v1
+  properties:
+  - url: https://docs.phantom.com/phantom-deeplinks/deeplinks-ios-and-android
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-deeplinks/handling-sessions
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-deeplinks/specifying-redirects
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-deeplinks/encryption
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-deeplinks/limitations
+    type: Documentation
+  description: Universal Link (https://phantom.app/ul/v1/<method>) and custom protocol (phantom://v1/<method>)
+    deeplinks for iOS and Android lets mobile dApps trigger Phantom for connect, disconnect, signMessage,
+    signTransaction, signAllTransactions, signAndSendTransaction, and browse (open URL in the in-app browser).
+    Uses an X25519 / TweetNaCl box encryption handshake with shared-secret-encrypted payloads and a returned
+    session token. Currently scoped to Solana. Universal Links are the recommended scheme.
+- aid: phantom:phantom-react-sdk
+  name: Phantom React SDK
+  tags:
+  - Embedded Wallet
+  - Ethereum
+  - OAuth
+  - React
+  - SDK
+  - Social Login
+  - Solana
+  - Wallet
+  - Web
+  humanURL: https://docs.phantom.com/sdks/react-sdk
+  properties:
+  - url: https://docs.phantom.com/sdks/react-sdk
+    type: Documentation
+  - url: https://www.npmjs.com/package/@phantom/react-sdk
+    type: SDK
+  - url: https://github.com/phantom/phantom-connect-sdk
+    type: SourceCode
+  description: React SDK (@phantom/react-sdk) for integrating Phantom across Solana and EVM chains with embedded
+    wallet support and OAuth social login (Google, Apple) alongside the browser extension path. Provides hooks
+    (usePhantom, useSolana, useEthereum) and components (ConnectButton, ConnectBox) plus peer dependencies on
+    @solana/web3.js and viem.
+- aid: phantom:phantom-react-native-sdk
+  name: Phantom React Native SDK
+  tags:
+  - Android
+  - Embedded Wallet
+  - iOS
+  - Mobile
+  - React Native
+  - SDK
+  - Wallet
+  humanURL: https://docs.phantom.com/sdks/react-native-sdk
+  properties:
+  - url: https://docs.phantom.com/sdks/react-native-sdk
+    type: Documentation
+  - url: https://github.com/phantom/phantom-connect-sdk
+    type: SourceCode
+  - url: https://github.com/phantom/react-native-wallet-sdk-demo-app
+    type: Samples
+  - url: https://github.com/phantom/bare-react-native-wallet-sdk-demo-app
+    type: Samples
+  description: React Native SDK that lets iOS and Android apps embed Phantom wallet functionality, including
+    embedded wallets, social login, and connection to the installed Phantom mobile app via deeplinks. Ships with
+    demo apps for both Expo and bare React Native setups.
+- aid: phantom:phantom-browser-sdk
+  name: Phantom Browser SDK
+  tags:
+  - Browser
+  - Embedded Wallet
+  - JavaScript
+  - SDK
+  - TypeScript
+  - Vanilla JS
+  - Wallet
+  humanURL: https://docs.phantom.com/sdks/browser-sdk
+  properties:
+  - url: https://docs.phantom.com/sdks/browser-sdk
+    type: Documentation
+  - url: https://github.com/phantom/phantom-connect-sdk
+    type: SourceCode
+  description: Framework-agnostic Browser SDK for integrating Phantom into vanilla JavaScript or TypeScript web
+    apps. Wraps the injected providers and embedded wallet flows so non-React applications can take advantage of
+    the same connect/sign/transaction surface offered by the React SDK.
+- aid: phantom:phantom-mcp-server
+  name: Phantom MCP Server
+  tags:
+  - Agents
+  - AI
+  - Bitcoin
+  - Ethereum
+  - Hyperliquid
+  - MCP
+  - Model Context Protocol
+  - Perpetuals
+  - Solana
+  - Sui
+  - Swaps
+  - Wallet
+  humanURL: https://docs.phantom.com/phantom-mcp-server
+  properties:
+  - url: https://docs.phantom.com/phantom-mcp-server
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-mcp-server/setup
+    type: Documentation
+  - url: https://docs.phantom.com/resources/mcp-server
+    type: Documentation
+  - url: https://www.npmjs.com/package/@phantom/mcp-server
+    type: SDK
+  description: Model Context Protocol server (@phantom/mcp-server) that exposes 27 tools to AI agents across
+    wallet operations (connection status, addresses, balances, transfers, transaction sending, message and
+    typed-data signing, simulation, allowances, login, pay), swap and portfolio (buy_token, portfolio_rebalance),
+    and Hyperliquid perpetuals (market data, positions, orders, deposits, leverage, spot-to-perps transfers).
+    Each agent gets its own wallet via device-code Phantom sign-in; sessions are stored at
+    ~/.phantom-mcp/session.json with OIDC-stamped KMS request signing. Supports Solana, Ethereum, Bitcoin, and
+    Sui.
+- aid: phantom:phantom-portal
+  name: Phantom Portal
+  tags:
+  - App Registration
+  - Auto-Confirm
+  - Contracts
+  - Developer Portal
+  - Domain Verification
+  - Phantom Portal
+  humanURL: https://docs.phantom.com/phantom-portal/portal
+  properties:
+  - url: https://docs.phantom.com/phantom-portal/portal
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-portal/getting-started
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-portal/create-account
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-portal/create-app
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-portal/verify-domain
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-portal/configure-urls
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-portal/edit-app-info
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-portal/get-app-id
+    type: Documentation
+  - url: https://docs.phantom.com/phantom-portal/contracts
+    type: Documentation
+  description: Developer portal for registering apps that integrate Phantom. Provides account creation, app
+    creation with App IDs, domain verification, redirect URL configuration, app metadata editing, and contract
+    allowlisting for auto-confirm flows that streamline repeat signing.
+common:
+- type: Website
+  url: https://phantom.com
+- type: Portal
+  url: https://docs.phantom.com
+- type: Documentation
+  url: https://docs.phantom.com/llms.txt
+  name: Docs Index (llms.txt)
+- type: Documentation
+  url: https://phantom.com/learn/developers
+  name: Developers Hub
+- type: SignUp
+  url: https://phantom.com/download
+- type: GitHub
+  url: https://github.com/phantom
+- type: SourceCode
+  url: https://github.com/phantom/phantom-connect-sdk
+  name: Phantom Connect SDK
+- type: Samples
+  url: https://github.com/phantom/deep-link-demo-app
+  name: Deep Link Demo App
+- type: Samples
+  url: https://github.com/phantom/multi-chain-sandbox
+  name: Multi-Chain Sandbox
+- type: Samples
+  url: https://github.com/phantom/sandbox
+  name: Browser Sandbox
+- type: Samples
+  url: https://github.com/phantom/eth_sandbox
+  name: EVM Sandbox
+- type: Samples
+  url: https://github.com/phantom/shortcuts-sandbox
+  name: Shortcuts Sandbox
+- type: Samples
+  url: https://github.com/phantom/deep-links-movie-tutorial
+  name: Deeplinks Movie Tutorial
+- type: SDK
+  url: https://github.com/phantom/phantom-wagmi-connector
+  name: Phantom Wagmi Connector
+- type: SDK
+  url: https://github.com/phantom/sign-in-with-solana
+  name: Sign In With Solana
+- type: SDK
+  url: https://github.com/phantom/bitcoin-wallet-standard
+  name: Bitcoin Wallet Standard
+- type: SDK
+  url: https://github.com/phantom/sol-wallet-adapter
+  name: Sol Wallet Adapter
+- type: SDK
+  url: https://github.com/phantom/blinks
+  name: Solana Blinks
+- type: SDK
+  url: https://github.com/phantom/phantom-agent-kit
+  name: Phantom Agent Kit
+- type: SDK
+  url: https://github.com/phantom/phantom-skill-generator
+  name: Phantom Skill Generator
+- type: Tools
+  url: https://github.com/phantom/blocklist
+  name: Phantom Blocklist
+- type: Tools
+  url: https://github.com/phantom/token-list
+  name: Solana Token List
+- type: Tools
+  url: https://github.com/phantom/shortcuts
+  name: NFT Shortcuts
+- type: Tools
+  url: https://github.com/phantom/synpress
+  name: Synpress E2E Fork
+- type: Documentation
+  url: https://docs.phantom.com/updates
+  name: Changelog
+  description: Phantom developer changelog and release notes.
+- type: ChangeLog
+  url: https://docs.phantom.com/updates
+- type: StatusPage
+  url: https://status.phantom.com
+- type: Documentation
+  url: https://docs.phantom.com/user-limits
+  name: User Limits
+- type: Documentation
+  url: https://docs.phantom.com/best-practices/go-live-checklist
+  name: Go Live Checklist
+- type: Documentation
+  url: https://docs.phantom.com/developer-powertools/testnet-mode
+  name: Testnet Mode
+- type: Documentation
+  url: https://docs.phantom.com/developer-powertools/mobile-web-debugging
+  name: Mobile Web Debugging
+- type: Documentation
+  url: https://docs.phantom.com/developer-powertools/domain-and-transaction-warnings
+  name: Domain & Transaction Warnings
+- type: Documentation
+  url: https://docs.phantom.com/developer-powertools/lighthouse
+  name: Lighthouse Transaction Validation
+- type: Documentation
+  url: https://docs.phantom.com/developer-powertools/ai-tools
+  name: AI-Assisted Development
+- type: Documentation
+  url: https://docs.phantom.com/resources/cursor-prompts
+  name: Cursor AI Prompts
+- type: Documentation
+  url: https://docs.phantom.com/resources/sandbox
+  name: Demo Apps & Sandboxes
+- type: Documentation
+  url: https://docs.phantom.com/resources/logos-and-assets
+  name: Logos & Brand Assets
+- type: Documentation
+  url: https://docs.phantom.com/resources/faq
+  name: Developer FAQ
+- type: Blog
+  url: https://phantom.com/learn/blog
+- type: Support
+  url: https://help.phantom.com/hc/en-us
+- type: Feedback
+  url: https://feedback.phantom.com/feature-requests
+- type: Press
+  url: https://phantom.com/press-kit
+- type: Careers
+  url: https://phantom.com/careers
+- type: TermsOfService
+  url: https://phantom.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://phantom.com/privacy-policy
+- type: SecurityPolicy
+  url: https://phantom.com/security
+- type: Twitter
+  url: https://x.com/phantom
+- type: LinkedIn
+  url: https://www.linkedin.com/company/phantom-app
+- type: YouTube
+  url: https://www.youtube.com/@phantom
+- type: Reddit
+  url: https://www.reddit.com/r/phantom_wallet
+- type: Instagram
+  url: https://www.instagram.com/phantom
+maintainers:
+- FN: Kin Lane
+  email: info@apievangelist.com
+specificationVersion: '0.20'
