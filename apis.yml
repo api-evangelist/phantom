@@ -167,7 +167,7 @@ apis:
   - url: https://docs.phantom.com/sdks/react-sdk
     type: Documentation
   - url: https://www.npmjs.com/package/@phantom/react-sdk
-    type: SDK
+    type: SDKs
   - url: https://github.com/phantom/phantom-connect-sdk
     type: SourceCode
   description: React SDK (@phantom/react-sdk) for integrating Phantom across Solana and EVM chains with embedded
@@ -240,7 +240,7 @@ apis:
   - url: https://docs.phantom.com/resources/mcp-server
     type: Documentation
   - url: https://www.npmjs.com/package/@phantom/mcp-server
-    type: SDK
+    type: SDKs
   description: Model Context Protocol server (@phantom/mcp-server) that exposes 27 tools to AI agents across
     wallet operations (connection status, addresses, balances, transfers, transaction sending, message and
     typed-data signing, simulation, allowances, login, pay), swap and portfolio (buy_token, portfolio_rebalance),
@@ -291,7 +291,7 @@ common:
 - type: Documentation
   url: https://phantom.com/learn/developers
   name: Developers Hub
-- type: SignUp
+- type: Signup
   url: https://phantom.com/download
 - type: GitHub
   url: https://github.com/phantom
@@ -316,25 +316,25 @@ common:
 - type: Samples
   url: https://github.com/phantom/deep-links-movie-tutorial
   name: Deeplinks Movie Tutorial
-- type: SDK
+- type: SDKs
   url: https://github.com/phantom/phantom-wagmi-connector
   name: Phantom Wagmi Connector
-- type: SDK
+- type: SDKs
   url: https://github.com/phantom/sign-in-with-solana
   name: Sign In With Solana
-- type: SDK
+- type: SDKs
   url: https://github.com/phantom/bitcoin-wallet-standard
   name: Bitcoin Wallet Standard
-- type: SDK
+- type: SDKs
   url: https://github.com/phantom/sol-wallet-adapter
   name: Sol Wallet Adapter
-- type: SDK
+- type: SDKs
   url: https://github.com/phantom/blinks
   name: Solana Blinks
-- type: SDK
+- type: SDKs
   url: https://github.com/phantom/phantom-agent-kit
   name: Phantom Agent Kit
-- type: SDK
+- type: SDKs
   url: https://github.com/phantom/phantom-skill-generator
   name: Phantom Skill Generator
 - type: Tools
