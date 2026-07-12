@@ -281,6 +281,10 @@ apis:
     creation with App IDs, domain verification, redirect URL configuration, app metadata editing, and contract
     allowlisting for auto-confirm flows that streamline repeat signing.
 common:
+- type: VulnerabilityDisclosure
+  url: security/phantom-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/phantom-domain-security.yml
 - type: Website
   url: https://phantom.com
 - type: Portal
