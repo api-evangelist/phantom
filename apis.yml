@@ -292,6 +292,9 @@ apis:
     creation with App IDs, domain verification, redirect URL configuration, app metadata editing, and contract
     allowlisting for auto-confirm flows that streamline repeat signing.
 common:
+- type: License
+  name: MIT
+  url: https://github.com/phantom/phantom-connect-sdk/blob/main/LICENSE
 - type: VulnerabilityDisclosure
   url: security/phantom-vulnerability-disclosure.yml
 - type: DomainSecurity
