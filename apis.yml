@@ -7,6 +7,25 @@ tags:
 - Blockchain
 - Crypto
 - Cryptocurrency
+- Deep Links
+- Embedded Wallet
+- Ethereum
+- EVM
+- Monad
+- MCP
+- Mobile
+- Polygon
+- Self-Custody
+- Solana
+- Sui
+- Wallets
+- Web3
+tags_raw:
+- Base
+- Bitcoin
+- Blockchain
+- Crypto
+- Cryptocurrency
 - Deeplinks
 - Embedded Wallet
 - Ethereum
@@ -54,6 +73,12 @@ apis:
   tags:
   - Provider
   - Solana
+  - Wallets
+  - Wallet Standard
+  - Web3
+  tags_raw:
+  - Provider
+  - Solana
   - Wallet
   - Wallet Standard
   - Web3
@@ -89,6 +114,16 @@ apis:
   - Monad
   - Polygon
   - Provider
+  - Wallets
+  tags_raw:
+  - Base
+  - EIP-1193
+  - Ethereum
+  - EVM
+  - HyperEVM
+  - Monad
+  - Polygon
+  - Provider
   - Wallet
   humanURL: https://docs.phantom.com/ethereum-monad-testnet-base-and-polygon/provider-api-reference
   properties:
@@ -102,6 +137,14 @@ apis:
 - aid: phantom:phantom-bitcoin-provider-api
   name: Phantom Bitcoin Provider API
   tags:
+  - Bitcoin
+  - Ordinals
+  - PSBT
+  - Provider
+  - SegWit
+  - Taproot
+  - Wallets
+  tags_raw:
   - Bitcoin
   - Ordinals
   - PSBT
@@ -124,6 +167,11 @@ apis:
   - Move
   - Provider
   - Sui
+  - Wallets
+  tags_raw:
+  - Move
+  - Provider
+  - Sui
   - Wallet
   humanURL: https://docs.phantom.com/sui/getting-started-with-sui
   properties:
@@ -135,6 +183,15 @@ apis:
 - aid: phantom:phantom-deeplinks-api
   name: Phantom Deeplinks API
   tags:
+  - Android
+  - Deep Links
+  - Encryption
+  - iOS
+  - Mobile
+  - Sessions
+  - Solana
+  - Universal Links
+  tags_raw:
   - Android
   - Deeplinks
   - Encryption
@@ -166,6 +223,16 @@ apis:
   tags:
   - Embedded Wallet
   - Ethereum
+  - Authentication
+  - React
+  - SDK
+  - Social Login
+  - Solana
+  - Wallets
+  - Web
+  tags_raw:
+  - Embedded Wallet
+  - Ethereum
   - OAuth
   - React
   - SDK
@@ -188,6 +255,14 @@ apis:
 - aid: phantom:phantom-react-native-sdk
   name: Phantom React Native SDK
   tags:
+  - Android
+  - Embedded Wallet
+  - iOS
+  - Mobile
+  - React Native
+  - SDK
+  - Wallets
+  tags_raw:
   - Android
   - Embedded Wallet
   - iOS
@@ -217,6 +292,14 @@ apis:
   - SDK
   - TypeScript
   - Vanilla JS
+  - Wallets
+  tags_raw:
+  - Browser
+  - Embedded Wallet
+  - JavaScript
+  - SDK
+  - TypeScript
+  - Vanilla JS
   - Wallet
   humanURL: https://docs.phantom.com/sdks/browser-sdk
   properties:
@@ -230,6 +313,18 @@ apis:
 - aid: phantom:phantom-mcp-server
   name: Phantom MCP Server
   tags:
+  - Agents
+  - Artificial Intelligence
+  - Bitcoin
+  - Ethereum
+  - Hyperliquid
+  - MCP
+  - Perpetuals
+  - Solana
+  - Sui
+  - Swaps
+  - Wallets
+  tags_raw:
   - Agents
   - AI
   - Bitcoin
