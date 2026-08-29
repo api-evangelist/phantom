@@ -290,9 +290,9 @@ apis:
   - url: https://github.com/phantom/phantom-connect-sdk
     type: SourceCode
   - url: https://github.com/phantom/react-native-wallet-sdk-demo-app
-    type: Samples
+    type: Examples
   - url: https://github.com/phantom/bare-react-native-wallet-sdk-demo-app
-    type: Samples
+    type: Examples
   description: React Native SDK that lets iOS and Android apps embed Phantom wallet functionality, including
     embedded wallets, social login, and connection to the installed Phantom mobile app via deeplinks. Ships with
     demo apps for both Expo and bare React Native setups.
@@ -428,22 +428,22 @@ common:
 - type: SourceCode
   url: https://github.com/phantom/phantom-connect-sdk
   name: Phantom Connect SDK
-- type: Samples
+- type: Examples
   url: https://github.com/phantom/deep-link-demo-app
   name: Deep Link Demo App
-- type: Samples
+- type: Examples
   url: https://github.com/phantom/multi-chain-sandbox
   name: Multi-Chain Sandbox
-- type: Samples
+- type: Examples
   url: https://github.com/phantom/sandbox
   name: Browser Sandbox
-- type: Samples
+- type: Examples
   url: https://github.com/phantom/eth_sandbox
   name: EVM Sandbox
-- type: Samples
+- type: Examples
   url: https://github.com/phantom/shortcuts-sandbox
   name: Shortcuts Sandbox
-- type: Samples
+- type: Examples
   url: https://github.com/phantom/deep-links-movie-tutorial
   name: Deeplinks Movie Tutorial
 - type: SDKs
