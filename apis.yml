@@ -41,6 +41,19 @@ tags_raw:
 - Web3
 type: Index
 kind: company
+deliveryModel:
+  model: open-core
+  license: MIT
+  open_source: true
+  commercial: true
+  callable_host: false
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: high
+  source:
+  - license
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -387,6 +400,10 @@ apis:
     creation with App IDs, domain verification, redirect URL configuration, app metadata editing, and contract
     allowlisting for auto-confirm flows that streamline repeat signing.
 common:
+- type: IssueTracker
+  url: https://github.com/phantom/phantom-connect-sdk/issues
+- type: Releases
+  url: https://github.com/phantom/phantom-connect-sdk/releases
 - type: License
   name: MIT
   url: https://github.com/phantom/phantom-connect-sdk/blob/main/LICENSE
